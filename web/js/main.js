@@ -6,8 +6,7 @@ App.controller('home', function (page) {
 			// Send message to friends
 			kik.send({
 				title: 'Incoming Message!',
-				text: 'This will self-destruct 3 seconds after opening.',
-				data: {'text': message}
+				text: message,
 			});
 		} else {
 			// Shows dialog if you are not on Kik browser
@@ -32,14 +31,9 @@ App.controller('home', function (page) {
 	});
 
 	// Do stuff if a Kik message is received
-	if (kik.message) {
-		// Show received message for 3 seconds
-		$(page).find('#message').css('display', 'block');
-		$(page).find('#message .message-text').text(kik.message.text);
-		setTimeout(function () {
-			$(page).find('#message').css('display', 'none');
-		}, 3000);
-	}
+//	if (kik.message) {
+
+	//}
 });
 
 
